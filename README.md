@@ -29,13 +29,13 @@ Steps
    curl -X GET http://localhost:8000/api/jokes/
    curl -X GET "http://localhost:8000/api/jokes/?query=Chuck"
 
-  For POST method you have to pass a JSON body containing description key
-  {"description": "Why do programmers prefer dark mode? Because light attracts bugs."}
+   For POST method you have to pass a JSON body containing description key
+   {"description": "Why do programmers prefer dark mode? Because light attracts bugs."}
 
-  For PUT method you have to pass the id joke and the description that update the specific joke by the given id
-  {"id": 1, "description": "Why do programmers prefer dark mode? Because light attracts bugs."}
+   For PUT method you have to pass the id joke and the description that update the specific joke by the given id
+   {"id": 1, "description": "Why do programmers prefer dark mode? Because light attracts bugs."}
 
-  Finally, for DELETE method pass the id number in query params
-  curl -X DELETE "http://localhost:8000/api/jokes/?number=1"
+   Finally, for DELETE method pass the id number in query params
+   curl -X DELETE "http://localhost:8000/api/jokes/?number=1"
 
 
