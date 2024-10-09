@@ -4,6 +4,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+from drf_spectacular.utils import extend_schema, OpenApiParameter
+
 from jokes.models import Joke
 from jokes.serializers import JokeSerializer
 
@@ -13,6 +15,16 @@ class JokeApiView(APIView):
     HTTP methods as GET, POST
     for Joke entity"""
 
+    @extend_schema(
+        parameters=[
+            OpenApiParameter(
+                name='chuck',
+                description='Param indicate random retrieve joke',
+                required=False,
+                type=str
+            )
+        ]
+    )
     def get(self, request):
         """This method retrieve a random joke from 
         external API if received Chuck as query param.
